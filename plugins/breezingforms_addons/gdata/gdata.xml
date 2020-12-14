@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="breezingforms_addons" version="2.5" method="upgrade">
+	<name>BreezingForms - AddOns - GData</name>
+	<creationDate>June 2015</creationDate>
+	<author>Markus Bopp</author>
+	<copyright>This Joomla! component is released under the GNU/GPL license</copyright>
+	<authorEmail>markus.bopp@crosstec.org</authorEmail>
+	<authorUrl>crosstec.org</authorUrl>
+	<version>1.3</version>
+	<administration></administration>
+	<description>
+	<![CDATA[
+        Adds Google Drive capabilities to your breezingforms based forms (spreadsheets).
+        ]]>
+    </description>
+    <files>
+        <filename plugin="gdata">gdata.php</filename>
+        <filename>index.html</filename>
+        <folder>breezingforms_addons_gdata_libraries</folder>
+        <folder>breezingforms_addons_gdata_tmpl</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.plg_breezingforms_addons_gdata.ini</language>
+        <language tag="de-DE">de-DE.plg_breezingforms_addons_gdata.ini</language>
+        <language tag="fr-FR">fr-FR.plg_breezingforms_addons_gdata.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+        </fields>
+    </config>
+    <!--  J! 1.5 compatibility -->
+    <params>
+    </params>
+</extension>

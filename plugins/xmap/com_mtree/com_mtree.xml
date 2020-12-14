@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="xmap" method="upgrade">
+    <name>PLG_XMAP_COM_MTREE</name>
+    <author>Guillermo Vargas</author>
+    <creationDate>07/20/2011</creationDate>
+    <copyright>GNU GPL</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <authorEmail>guille@vargas.co.cr</authorEmail>
+    <authorUrl>joomla.vargas.co.cr</authorUrl>
+    <version>rev 301</version>
+    <description>PLG_XMAP_COM_MTREE_DESC</description>
+    <files>
+        <filename plugin="com_mtree">com_mtree.php</filename>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_xmap_com_mtree.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_xmap_com_mtree.sys.ini</language>
+        <language tag="fa-IR">fa-IR/fa-IR.plg_xmap_com_mtree.ini</language>
+        <language tag="fa-IR">fa-IR/fa-IR.plg_xmap_com_mtree.sys.ini</language>
+        <language tag="cs-CZ">cs-CZ/cs-CZ.plg_xmap_com_mtree.ini</language>
+        <language tag="cs-CZ">cs-CZ/cs-CZ.plg_xmap_com_mtree.sys.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.plg_xmap_com_mtree.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.plg_xmap_com_mtree.sys.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_xmap_com_mtree.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_xmap_com_mtree.sys.ini</language>
+    </languages>
+    <updateservers>
+        <server type="collection" priority="1" name="z-index development">http://www.z-index.net/en/extensions.xml</server>
+    </updateservers>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="cats_order" type="list" default="cat_name" label="PLG_XMAP_COM_MTREE_CATEGORIES_ORDER_LABEL" description="PLG_XMAP_COM_MTREE_CATEGORIES_ORDER_DESC">
+                    <option value="ordering">PLG_XMAP_COM_MTREE_ORDERING_DEFAULT</option>
+                    <option value="cat_name">PLG_XMAP_COM_MTREE_ORDERING_NAME</option>
+                    <option value="cat_created">PLG_XMAP_COM_MTREE_ORDERING_CREATED</option>
+                </field>
+                <field name="cats_orderdir" type="list" default="ASC" label="PLG_XMAP_COM_MTREE_CATEGORIES_ORDER_DIR_LABEL" description="PLG_XMAP_COM_MTREE_CATEGORIES_ORDER_DIR_DESC">
+                    <option value="ASC">PLG_XMAP_COM_MTREE_ORDERING_DIR_ASC</option>
+                    <option value="DESC">PLG_XMAP_COM_MTREE_ORDERING_DIR_DESC</option>
+                </field>
+                <field name="include_links" type="list" default="1" label="PLG_XMAP_COM_MTREE_SHOW_LISTINGS_LABEL" description="PLG_XMAP_COM_MTREE_SHOW_LISTINGS_DESC">
+                    <option value="0">PLG_XMAP_COM_MTREE_OPTION_NEVER</option>
+                    <option value="1">PLG_XMAP_COM_MTREE_OPTION_ALWAYS</option>
+                    <option value="2">PLG_XMAP_COM_MTREE_OPTION_XML_ONLY</option>
+                    <option value="3">PLG_XMAP_COM_MTREE_OPTION_HTML_ONLY</option>
+                </field>
+                <field name="links_order" type="list" default="ordering" label="PLG_XMAP_COM_MTREE_LISTINGS_ORDER_LABEL" description="PLG_XMAP_COM_MTREE_LISTINGS_ORDER_DESC">
+                    <option value="ordering">PLG_XMAP_COM_MTREE_ORDERING_DEFAULT</option>
+                    <option value="link_name">PLG_XMAP_COM_MTREE_ORDERING_NAME</option>
+                    <option value="link_created">PLG_XMAP_COM_MTREE_ORDERING_CREATED</option>
+                    <option value="link_modified">PLG_XMAP_COM_MTREE_ORDERING_MODIFIED</option>
+                    <option value="link_hits">PLG_XMAP_COM_MTREE_ORDERING_HITS</option>
+                </field>
+                <field name="entries_orderdir" type="list" default="ASC" label="PLG_XMAP_COM_MTREE_LISTINGS_ORDER_DIR_LABEL" description="PLG_XMAP_COM_MTREE_LISTINGS_ORDER_DIR_DESC">
+                    <option value="ASC">PLG_XMAP_COM_MTREE_ORDERING_DIR_ASC</option>
+                    <option value="DESC">PLG_XMAP_COM_MTREE_ORDERING_DIR_DESC</option>
+                </field>
+                <field name="max_links" type="text" default="" label="PLG_XMAP_COM_MTREE_MAX_ENTRIES_LABEL" description="PLG_XMAP_COM_MTREE_MAX_ENTRIES_DESC" />
+                <field name="max_age" type="text" default="" label="PLG_XMAP_COM_MTREE_LISTINGS_NEWER_THAN_LABEL" description="PLG_XMAP_COM_MTREE_LISTINGS_NEWER_THAN_LABEL" />
+            </fieldset>
+            <fieldset name="xml">
+                <field name="cat_priority" type="list" default="0.5" label="PLG_XMAP_COM_MTREE_CATEGORY_PRIORITY_LABEL" description="PLG_XMAP_COM_MTREE_CATEGORY_PRIORITY_DESC">
+                    <option value="-1">PLG_XMAP_COM_MTREE_OPTION_USE_PARENT_MENU</option>
+                    <option value="0.0">0.0</option>
+                    <option value="0.1">0.1</option>
+                    <option value="0.2">0.2</option>
+                    <option value="0.3">0.3</option>
+                    <option value="0.4">0.4</option>
+                    <option value="0.5">0.5</option>
+                    <option value="0.6">0.6</option>
+                    <option value="0.7">0.7</option>
+                    <option value="0.8">0.8</option>
+                    <option value="0.9">0.9</option>
+                    <option value="1">1</option>
+                </field>
+                <field name="cat_changefreq" type="list" default="weekly" label="PLG_XMAP_COM_MTREE_CATEGORY_CHANGEFREQ_LABEL" description="PLG_XMAP_COM_MTREE_CATEGORY_CHANGEFREQ_DESC">
+                    <option value="-1">PLG_XMAP_COM_MTREE_OPTION_USE_PARENT_MENU</option>
+                    <option value="always">PLG_XMAP_COM_MTREE_OPTION_ALWAYS</option>
+                    <option value="hourly">PLG_XMAP_COM_MTREE_OPTION_HOURLY</option>
+                    <option value="daily">PLG_XMAP_COM_MTREE_OPTION_DAILY</option>
+                    <option value="weekly">PLG_XMAP_COM_MTREE_OPTION_WEEKLY</option>
+                    <option value="monthly">PLG_XMAP_COM_MTREE_OPTION_MONTHLY</option>
+                    <option value="yearly">PLG_XMAP_COM_MTREE_OPTION_YEARLY</option>
+                    <option value="never">PLG_XMAP_COM_MTREE_OPTION_NEVER</option>
+                </field>
+                <field name="link_priority" type="list" default="0.5" label="PLG_XMAP_COM_MTREE_LISTING_PRIORITY_LABEL" description="PLG_XMAP_COM_MTREE_LISTING_PRIORITY_DESC">
+                    <option value="-1">PLG_XMAP_COM_MTREE_OPTION_USE_PARENT_MENU</option>
+                    <option value="0.0">0.0</option>
+                    <option value="0.1">0.1</option>
+                    <option value="0.2">0.2</option>
+                    <option value="0.3">0.3</option>
+                    <option value="0.4">0.4</option>
+                    <option value="0.5">0.5</option>
+                    <option value="0.6">0.6</option>
+                    <option value="0.7">0.7</option>
+                    <option value="0.8">0.8</option>
+                    <option value="0.9">0.9</option>
+                    <option value="1">1</option>
+                </field>
+                <field name="link_changefreq" type="list" default="weekly" label="PLG_XMAP_COM_MTREE_LISTING_CHANGEFREQ_LABEL" description="PLG_XMAP_COM_MTREE_LISTING_CHANGEFREQ_DESC">
+                    <option value="-1">PLG_XMAP_COM_MTREE_OPTION_USE_PARENT_MENU</option>
+                    <option value="always">PLG_XMAP_COM_MTREE_OPTION_ALWAYS</option>
+                    <option value="hourly">PLG_XMAP_COM_MTREE_OPTION_HOURLY</option>
+                    <option value="daily">PLG_XMAP_COM_MTREE_OPTION_DAILY</option>
+                    <option value="weekly">PLG_XMAP_COM_MTREE_OPTION_WEEKLY</option>
+                    <option value="monthly">PLG_XMAP_COM_MTREE_OPTION_MONTHLY</option>
+                    <option value="yearly">PLG_XMAP_COM_MTREE_OPTION_YEARLY</option>
+                    <option value="never">PLG_XMAP_COM_MTREE_OPTION_NEVER</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
